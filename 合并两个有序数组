@@ -1,0 +1,39 @@
+class Solution {
+public:
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+//int a=0,b=0;
+int c=0; 
+int b=0;
+for(int a=0;a<m;a++)
+{
+if(b<n)
+{
+    if(nums1[a]>nums2[b])
+    {
+        int c=m-1;
+        while(c>=a)
+        {
+            nums1[c+1]=nums1[c];
+            c--;
+        }
+        nums1[a]=nums2[b];
+        m++;//nums1长度增加
+        b++;
+        c++;
+        
+    }
+}
+
+if(b>=n)
+{
+break;
+}
+}
+for(;b<n;b++)
+{
+    nums1[m]=nums2[b];
+    m++;
+}
+
+    }
+};
