@@ -24,6 +24,7 @@ while(num<=(n/2))
         }
         else{
             index++;
+//111111
         }
     }
 }
